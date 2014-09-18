@@ -10,7 +10,7 @@ Example:
 <pre>
 require_once('geo-distance.php');
 
-/* 1 Market St. San Francisco, California, USA */
+// 1 Market St. San Francisco, California, USA
 $start = array (
   'lat' => 37.793629,
   'long' => -122.394264
