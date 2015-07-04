@@ -1,0 +1,8 @@
+{
+    "name": "naveed125/geo-distance",
+    "version": "1.0.0",
+    "dist": {
+        "url": "https://github.com/naveed125/geo-distance",
+        "type": "vcs"
+    }
+}
