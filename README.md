@@ -1,14 +1,13 @@
 Geo Distance
 ============
 
-Calculate distance between two points on earth using longitude and longitude.
+Calculate distance between two points on earth using longitude and longitude. Can be used to find out the closest metro area based on distance.
 
 Example:
 --------
 
 
 <pre>
-require_once('geo-distance.php');
 
 // 1 Market St. San Francisco, California, USA
 $start = array (
@@ -22,7 +21,8 @@ $end = array (
   'long' => -122.409842
 );
 
-$distance = calculateDistance($start,$end);
+$gd = new GeoDistance\GeoDistance();
+$distance = $gd->distance($start,$end);
 
 echo "Distance between the two points is: {$distance} miles\n";
 </pre>
