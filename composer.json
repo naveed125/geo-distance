@@ -4,5 +4,9 @@
     "dist": {
         "url": "https://github.com/naveed125/geo-distance",
         "type": "vcs"
+    },
+    "autoload": {
+        "files": ["geo-distance.php"]
     }
+
 }
