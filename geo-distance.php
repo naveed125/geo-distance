@@ -35,48 +35,48 @@ class GeoDistance {
                     'id' => self::METRO_AREA_SF_BAY,
                     'title' => 'San Francisco Bay Area',
                     'country' => self::COUNTRY_US,
-                    'longitude' => 37.615834,
-                    'latitude' => -122.231167
+                    'latitude' => 37.615834,
+                    'longitude' => -122.231167
             ),
         self::METRO_AREA_NEW_YORK =>
             array(
                     'id' => self::METRO_AREA_NEW_YORK,
                     'title' =>'New York',
                     'country' => self::COUNTRY_US,
-                    'longitude' => 40.6443351,
-                    'latitude' => -73.97350120
+                    'latitude' => 40.6443351,
+                    'longitude' => -73.97350120
             ),
         self::METRO_AREA_LOS_ANGELES =>
             array(
                     'id' => self::METRO_AREA_LOS_ANGELES,
                     'title' =>'Los Angeles',
                     'country' => self::COUNTRY_US,
-                    'longitude' => 34.0204989,
-                    'latitude' => -118.4117325
+                    'latitude' => 34.0204989,
+                    'longitude' => -118.4117325
             ),
         self::METRO_AREA_SEATTLE =>
             array(
                     'id' => self::METRO_AREA_SEATTLE,
                     'title' =>'Seattle',
                     'country' => self::COUNTRY_US,
-                    'longitude' => 47.614848,
-                    'latitude' => -122.3359058
+                    'latitude' => 47.614848,
+                    'longitude' => -122.3359058
             ),
         self::METRO_AREA_PORTLAND =>
             array(
                     'id' => self::METRO_AREA_PORTLAND,
                     'title' =>'Portland',
                     'country' => self::COUNTRY_US,
-                    'longitude' => 45.5424364,
-                    'latitude' => -122.654422
+                    'latitude' => 45.5424364,
+                    'longitude' => -122.654422
             ),
         self::METRO_AREA_CHICAGO =>
             array(
                     'id' => self::METRO_AREA_CHICAGO,
                     'title' =>'Chicago',
                     'country' => self::COUNTRY_US,
-                    'longitude' => 41.8337329,
-                    'latitude' => -87.7321555
+                    'latitude' => 41.8337329,
+                    'longitude' => -87.7321555
             )
     );
     
@@ -112,7 +112,6 @@ class GeoDistance {
       $shortest = PHP_INT_MAX;
       foreach(self::$metro_areas as $id=>$data){
           $distance = $this->distance($location, $data);
-          error_log("distance from {$data['title']} is {$distance}");
           if($distance < $shortest){
               $shortest = $distance;
               $metro = $data;
