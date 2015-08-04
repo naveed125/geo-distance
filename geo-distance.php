@@ -86,7 +86,7 @@ class GeoDistance {
     * @param array $point1
     * @param array $point2
    */
-  function distance($point1, $point2)
+  public function distance($point1, $point2)
   {
     $distance = (3958 * 3.1415926 * sqrt(
                 ($point1['latitude'] - $point2['latitude'])
