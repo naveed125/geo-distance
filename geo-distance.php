@@ -7,10 +7,10 @@ class GeoDistance {
     /**
      * Country constants
      */
-    const COUNTRY_US = 'us';
-    const COUNTRY_CANADA = 'ca';
-    const COUNTRY_MEXICO = 'mx';
-    const COUNTR_UK = 'uk';
+    const COUNTRY_US         = 'us';
+    const COUNTRY_CANADA     = 'ca';
+    const COUNTRY_MEXICO     = 'mx';
+    const COUNTRY_UK         = 'uk';
     
     public static $countries = array(
         self::COUNTRY_US => 'United States',
@@ -22,13 +22,28 @@ class GeoDistance {
     /**
      * Metro area constants
      */
-    const METRO_AREA_SF_BAY = 1;
-    const METRO_AREA_NEW_YORK = 2;
-    const METRO_AREA_LOS_ANGELES = 3;
-    const METRO_AREA_SEATTLE = 4;
-    const METRO_AREA_PORTLAND = 5;
-    const METRO_AREA_CHICAGO = 6;
+    const METRO_AREA_SF_BAY           = 1;
+    const METRO_AREA_NEW_YORK         = 2;
+    const METRO_AREA_LOS_ANGELES      = 3;
+    const METRO_AREA_SEATTLE          = 4;
+    const METRO_AREA_PORTLAND         = 5;
+    const METRO_AREA_CHICAGO          = 6;
+    const METRO_AREA_ATLANTA          = 7;
+    const METRO_AREA_CHARLOTTE        = 8;
+    const METRO_AREA_CHATTANOOGA      = 9;
+    const METRO_AREA_DALLAS_FORTWORTH = 10;
+    const METRO_AREA_HOUSTON          = 11;
+    const METRO_AREA_MIAMI            = 12;
+    const METRO_AREA_NASHVILLE        = 13;
+    const METRO_AREA_PHOENIX          = 14;
+    const METRO_AREA_SACRAMENTO       = 15;
+    const METRO_AREA_SAN_ANTONIO      = 16;
+    const METRO_AREA_SAN_DIEGO        = 17;
+    const METRO_AREA_TAMPA            = 18;
     
+    /**
+     * Metro area definitions
+     */
     private static $metro_areas = array(
         self::METRO_AREA_SF_BAY =>
             array(
@@ -77,7 +92,103 @@ class GeoDistance {
                     'country' => self::COUNTRY_US,
                     'latitude' => 41.8337329,
                     'longitude' => -87.7321555
-            )
+            ),
+        self::METRO_AREA_ATLANTA =>
+            array(
+                    'id' => self::METRO_AREA_ATLANTA,
+                    'title' =>'Atlanta',
+                    'country' => self::COUNTRY_US,
+                    'latitude' => 33.748314,
+                    'longitude' => -84.391108
+            ),
+        self::METRO_AREA_CHARLOTTE =>
+            array(
+                    'id' => self::METRO_AREA_CHARLOTTE,
+                    'title' =>'Charlotte',
+                    'country' => self::COUNTRY_US,
+                    'latitude' => 0,
+                    'longitude' => 0
+            ),
+        self::METRO_AREA_CHATTANOOGA =>
+            array(
+                    'id' => self::METRO_AREA_CHATTANOOGA,
+                    'title' =>'Chattanooga',
+                    'country' => self::COUNTRY_US,
+                    'latitude' => 0,
+                    'longitude' => 0
+            ),
+        self::METRO_AREA_DALLAS_FORTWORTH =>
+            array(
+                    'id' => self::METRO_AREA_DALLAS_FORTWORTH,
+                    'title' =>'Dallas/Fortworth',
+                    'country' => self::COUNTRY_US,
+                    'latitude' => 0,
+                    'longitude' => 0
+            ),
+        self::METRO_AREA_HOUSTON =>
+            array(
+                    'id' => self::METRO_AREA_HOUSTON,
+                    'title' =>'Houston',
+                    'country' => self::COUNTRY_US,
+                    'latitude' => 0,
+                    'longitude' => 0
+            ),
+        self::METRO_AREA_MIAMI =>
+            array(
+                    'id' => self::METRO_AREA_MIAMI,
+                    'title' =>'Miami',
+                    'country' => self::COUNTRY_US,
+                    'latitude' => 0,
+                    'longitude' => 0
+            ),
+        self::METRO_AREA_NASHVILLE =>
+            array(
+                    'id' => self::METRO_AREA_NASHVILLE,
+                    'title' =>'Nashville',
+                    'country' => self::COUNTRY_US,
+                    'latitude' => 0,
+                    'longitude' => 0
+            ),
+        self::METRO_AREA_PHOENIX =>
+            array(
+                    'id' => self::METRO_AREA_PHOENIX,
+                    'title' =>'Phoenix',
+                    'country' => self::COUNTRY_US,
+                    'latitude' => 0,
+                    'longitude' => 0
+            ),
+        self::METRO_AREA_SACRAMENTO =>
+            array(
+                    'id' => self::METRO_AREA_SACRAMENTO,
+                    'title' =>'Sacramento',
+                    'country' => self::COUNTRY_US,
+                    'latitude' => 0,
+                    'longitude' => 0
+            ),
+        self::METRO_AREA_SAN_ANTONIO =>
+            array(
+                    'id' => self::METRO_AREA_SAN_ANTONIO,
+                    'title' =>'San Antonio',
+                    'country' => self::COUNTRY_US,
+                    'latitude' => 0,
+                    'longitude' => 0
+            ),
+        self::METRO_AREA_SAN_DIEGO =>
+            array(
+                    'id' => self::METRO_AREA_SAN_DIEGO,
+                    'title' =>'San Diego',
+                    'country' => self::COUNTRY_US,
+                    'latitude' => 0,
+                    'longitude' => 0
+            ),
+        self::METRO_AREA_TAMPA =>
+            array(
+                    'id' => self::METRO_AREA_TAMPA,
+                    'title' =>'Tampa',
+                    'country' => self::COUNTRY_US,
+                    'latitude' => 0,
+                    'longitude' => 0
+            ),
     );
     
 
@@ -88,7 +199,7 @@ class GeoDistance {
    */
   public function distance($point1, $point2)
   {
-    $distance = (3958 * 3.1415926 * sqrt(
+        $distance = (3958 * 3.1415926 * sqrt(
                 ($point1['latitude'] - $point2['latitude'])
                 * ($point1['latitude'] - $point2['latitude'])
                 + cos($point1['latitude'] / 57.29578)
