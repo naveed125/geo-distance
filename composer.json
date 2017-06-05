@@ -1,6 +1,6 @@
 {
-	"name" : "naveed125/geo-distance",
-	"version" : "1.0.2",
+    "name" : "naveed125/geo-distance",
+    "version" : "1.0.2",
     "description": "Find distance between two points on earth. Find closest metro area.",
     "keywords": ["php", "geo-distance", "psr-4"],
     "homepage": "http://github.com/naveed125/geo-distance",
