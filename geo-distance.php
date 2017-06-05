@@ -122,16 +122,16 @@ class GeoDistance {
                     'id' => self::METRO_AREA_DALLAS_FORTWORTH,
                     'title' =>'Dallas/Fortworth',
                     'country' => self::COUNTRY_US,
-                    'latitude' => 0,
-                    'longitude' => 0
+                    'latitude' => 32.778156,
+                    'longitude' => -96.795401
             ),
         self::METRO_AREA_HOUSTON =>
             array(
                     'id' => self::METRO_AREA_HOUSTON,
                     'title' =>'Houston',
                     'country' => self::COUNTRY_US,
-                    'latitude' => 0,
-                    'longitude' => 0
+                    'latitude' => 29.760452,
+                    'longitude' => -95.369782
             ),
         self::METRO_AREA_MIAMI =>
             array(
@@ -162,24 +162,24 @@ class GeoDistance {
                     'id' => self::METRO_AREA_SACRAMENTO,
                     'title' =>'Sacramento',
                     'country' => self::COUNTRY_US,
-                    'latitude' => 0,
-                    'longitude' => 0
+                    'latitude' => 38.579332,
+                    'longitude' => -121.490901
             ),
         self::METRO_AREA_SAN_ANTONIO =>
             array(
                     'id' => self::METRO_AREA_SAN_ANTONIO,
                     'title' =>'San Antonio',
                     'country' => self::COUNTRY_US,
-                    'latitude' => 0,
-                    'longitude' => 0
+                    'latitude' => 29.424580,
+                    'longitude' => -98.494610
             ),
         self::METRO_AREA_SAN_DIEGO =>
             array(
                     'id' => self::METRO_AREA_SAN_DIEGO,
                     'title' =>'San Diego',
                     'country' => self::COUNTRY_US,
-                    'latitude' => 0,
-                    'longitude' => 0
+                    'latitude' => 32.715000,
+                    'longitude' => -117.162880
             ),
         self::METRO_AREA_TAMPA =>
             array(
