@@ -1,10 +1,14 @@
 {
 	"name" : "naveed125/geo-distance",
-	"version" : "1.0.1",
-	"dist" : {
-		"url" : "https://github.com/naveed125/geo-distance",
-		"type" : "vcs"
-	},
+	"version" : "1.0.2",
+    "description": "Find distance between two points on earth. Find closest metro area.",
+    "keywords": ["php", "geo-distance", "psr-4"],
+    "homepage": "http://github.com/naveed125/geo-distance",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {"GeoDistance\\": "src/GeoDistance/"}
+    },
     "require": {
         "php": ">=5.6.0"
     },
@@ -15,10 +19,5 @@
         "psr-4": {
             "Tests\\": "tests/"
         }
-    },
-	"autoload" : {
-		"files" : [
-			"geo-distance.php"
-		]
-	}
+    }
 }
